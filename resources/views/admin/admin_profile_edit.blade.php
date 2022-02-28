@@ -12,42 +12,41 @@
             </h4>
           </div>
           <div class="box-body">
-            <form method="POST" action="{{route('admin.profile.store',$data->id)}}" enctype="multipart/form-data">
-            @csrf
-            <div class="form-group">
-              <div class="row">
-                <div class="col-6">
-                  <label class="col-form-label">Email</label>
-                  <input class="form-control" type="email" name="email" value="{{$data->email}}">
-                </div>
-                <div class="col-6">
-                  <label class="col-form-label ">Nom utilisateur</label>
-                  <input class="form-control" type="text" name="name" value="{{$data->name}}">
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group">
-               <div class="row">
-                <div class="col-6">
-                  <label   for="customFile">Image de profil</label>
-                  <input type="file" class="form-control"  id="photoProfile" name="profile_photo_path">
-                </div>
-                <div class="col-6">
-                  <img src="{{ !empty($data->profile_photo_path) ? url('uploads/admin_images/'.    $data->profile_photo_path) : url('uploads/no_image.jpg')}}" style="width: 100px; height:100px;" id="showImage">
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="row">
-                <div class="col-12">
-                  <div class="text-xs-right">
-                    <button type="submit" class="btn btn-rounded btn-info">Mettre à jour</button>
+           <form method="POST" action="{{route('admin.profile.store',$data->id)}}"      enctype="multipart/form-data">
+              @csrf
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-6">
+                    <label class="col-form-label">Email</label>
+                    <input class="form-control" type="email" name="email" value="{{$data->email}}">
+                  </div>
+                  <div class="col-6">
+                    <label class="col-form-label ">Nom utilisateur</label>
+                    <input class="form-control" type="text" name="name" value="{{$data->name}}">
                   </div>
                 </div>
               </div>
-            </div>
 
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-6">
+                    <label   for="customFile">Image de profil</label>
+                    <input type="file" class="form-control"  id="photoProfile" name="profile_photo_path">
+                  </div>
+                  <div class="col-6">
+                    <img src="{{ !empty($data->profile_photo_path) ? url('uploads/admin_images/'.    $data->profile_photo_path) : url('uploads/no_image.jpg')}}" style="width: 100px; height:100px;" id="showImage">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="text-xs-right">
+                      <button type="submit" class="btn btn-rounded btn-info">Mettre à jour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </form>
           </div>
         </div>

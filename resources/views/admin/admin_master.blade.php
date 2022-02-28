@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="{{ asset('backend/css/style.css') }}">
 	<link rel="stylesheet" href="{{ asset('backend/css/skin_color.css') }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   </head>
 <body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
 <div class="wrapper">
@@ -42,6 +43,7 @@
 	<script src="{{asset('backend/js/template.js')}}"></script>
 	<script src="{{asset('backend/js/pages/dashboard.js')}}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
   <script>
     @if(Session::has('message'))
       var type = "{{ Session::get('alert-type','info')  }}"
@@ -63,6 +65,9 @@
         break;
       }
     @endif
+
+
+
   </script>
   @yield('footer-script')
 </body>

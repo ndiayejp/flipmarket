@@ -7,10 +7,10 @@
 $(function () {
 
   'use strict';
-	
-	
-	
-	
+
+
+
+
 	var options = {
           series: [44, 55],
           chart: {
@@ -38,14 +38,16 @@ $(function () {
 		  },
 		colors:['#00BC8B', '#caffe5'],
         };
+        if(document.querySelector("#chart41")){
+           var chart = new ApexCharts(document.querySelector("#chart41"), options);
+          chart.render();
+        }
 
-        var chart = new ApexCharts(document.querySelector("#chart41"), options);
-        chart.render();
-	
-	
-		
-	
-	
+
+
+
+
+
 	var options = {
           series: [44, 55],
           chart: {
@@ -73,16 +75,18 @@ $(function () {
 		  },
 		colors:['#0F5EF7', '#e1f0ff'],
         };
-
-        var chart = new ApexCharts(document.querySelector("#chart42"), options);
+        if(document.querySelector("#chart42")){
+           var chart = new ApexCharts(document.querySelector("#chart42"), options);
         chart.render();
-	
-	
-	
-	
-	
-	
-	
+        }
+
+
+
+
+
+
+
+
 	var options = {
         series: [{
             name: "Profit",
@@ -106,8 +110,8 @@ $(function () {
 			lineCap: 'butt',
 			colors: undefined,
 			width: 5,
-			dashArray: 0, 
-        },		
+			dashArray: 0,
+        },
 		markers: {
 			size: 5,
 			colors: '#ffffff',
@@ -127,13 +131,13 @@ $(function () {
 			  size: undefined,
 			  sizeOffset: 3
 			}
-		},	
+		},
         grid: {
-			borderColor: '#f7f7f7', 
+			borderColor: '#f7f7f7',
           row: {
             colors: ['transparent'], // takes an array which will be repeated on columns
             opacity: 0
-          },			
+          },
 		  yaxis: {
 			lines: {
 			  show: true,
@@ -143,7 +147,7 @@ $(function () {
         xaxis: {
           categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
 		  labels: {
-			show: true,        
+			show: true,
           },
           axisBorder: {
             show: true
@@ -152,7 +156,7 @@ $(function () {
             show: true
           },
           tooltip: {
-            enabled: true,        
+            enabled: true,
           },
         },
         yaxis: {
@@ -162,14 +166,14 @@ $(function () {
               return val + "K";
             }
           }
-        
+
         },
       };
       var chart = new ApexCharts(document.querySelector("#charts_widget_43_chart"), options);
       chart.render();
-	
-	
-	
+
+
+
 	var options = {
           series: [{
             name: "Revenue",
@@ -180,7 +184,7 @@ $(function () {
           type: 'area',
           zoom: {
             enabled: false
-          },			  
+          },
 		  toolbar: {
 			show: false,
 		  }
@@ -192,7 +196,7 @@ $(function () {
           curve: 'stepline'
         },
 		colors: ['#7a15f7'],
-        grid: {			
+        grid: {
 			show: false,
 			padding: {
 			  top: 0,
@@ -201,7 +205,7 @@ $(function () {
 			  left: -10
 			},
         },
-		
+
 		 legend: {
       		show: false,
 		 },
@@ -217,7 +221,7 @@ $(function () {
           		show: false,
 			},
         	},
-		
+
         yaxis: {
           labels: {
           		show: false,
@@ -227,11 +231,11 @@ $(function () {
 
         var chart = new ApexCharts(document.querySelector("#revenue1"), options);
         chart.render();
-	
-	
-	
-	
-	
+
+
+
+
+
 	var options = {
           series: [{
             name: "Revenue",
@@ -242,7 +246,7 @@ $(function () {
           type: 'area',
           zoom: {
             enabled: false
-          },			  
+          },
 		  toolbar: {
 			show: false,
 		  }
@@ -254,7 +258,7 @@ $(function () {
           curve: 'stepline'
         },
 		colors: ['#FFB800'],
-        grid: {			
+        grid: {
 			show: false,
 			padding: {
 			  top: 0,
@@ -263,7 +267,7 @@ $(function () {
 			  left: -10
 			},
         },
-		
+
 		 legend: {
       		show: false,
 		 },
@@ -279,7 +283,7 @@ $(function () {
           		show: false,
 			},
         	},
-		
+
         yaxis: {
           labels: {
           		show: false,
@@ -289,12 +293,12 @@ $(function () {
 
         var chart = new ApexCharts(document.querySelector("#revenue2"), options);
         chart.render();
-	
-	
 
-	
-	
-		
+
+
+
+
+
 		var options = {
           series: [{
           name: 'Net Profit',
@@ -322,7 +326,7 @@ $(function () {
           enabled: false,
         },
 		grid: {
-			show: true,			
+			show: true,
 		},
         stroke: {
           show: true,
@@ -332,10 +336,10 @@ $(function () {
 		colors: ['#EF3737', '#0F5EF7'],
         xaxis: {
           categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
-			
+
         },
         yaxis: {
-          
+
         },
 		 legend: {
       		show: false,
@@ -357,7 +361,7 @@ $(function () {
 
         var chart = new ApexCharts(document.querySelector("#recent_trend"), options);
         chart.render();
-	
-	
-	
+
+
+
 }); // End of use strict
